@@ -1,0 +1,29 @@
+{
+  "questions": [
+    {
+      "text": "Who has the most Formula 1 World Championships?",
+      "choices": ["Lewis Hamilton", "Michael Schumacher", "Ayrton Senna", "Sebastian Vettel"],
+      "correct": 1
+    },
+    {
+      "text": "Which team has the most Constructors' Championships?",
+      "choices": ["Ferrari", "McLaren", "Mercedes", "Red Bull Racing"],
+      "correct": 0
+    },
+    {
+      "text": "Which circuit is known as 'The Temple of Speed'?",
+      "choices": ["Silverstone", "Monza", "Suzuka", "Spa-Francorchamps"],
+      "correct": 1
+    },
+    {
+      "text": "In what year did Formula 1 first officially start?",
+      "choices": ["1946", "1950", "1955", "1960"],
+      "correct": 1
+    },
+    {
+      "text": "Which driver holds the record for the most wins in a single season?",
+      "choices": ["Sebastian Vettel", "Lewis Hamilton", "Michael Schumacher", "Max Verstappen"],
+      "correct": 3
+    }
+  ]
+}

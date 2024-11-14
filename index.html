@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Fan Hub</title>
+  <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Explore</a>
+          <ul class="dropdown-menu">
+            <li><a href="teams.html">Teams & Drivers</a></li>
+            <li><a href="circuits.html">Circuits</a></li>
+          </ul>
+        </li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Welcome to F1 Fan Hub</h1>
+      <p>Your ultimate destination for all things Formula 1!</p>
+      <a href="teams.html" class="btn">Discover Teams</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <h2>About Formula 1</h2>
+      <p>
+        Formula 1 is the pinnacle of motorsport, featuring the fastest cars, the most skilled drivers, and iconic tracks around the globe.
+        From the streets of Monaco to the fast straights of Monza, F1 delivers excitement and adrenaline every race weekend.
+      </p>
+      <img src="images/f1_car.jpg" alt="F1 Car" class="responsive-img">
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights">
+      <h2>Season Highlights</h2>
+      <div class="grid">
+        <div class="highlight-item">
+          <img src="images/race_1.jpg" alt="Race 1">
+          <h3>Monaco Grand Prix</h3>
+          <p>Experience the glamour and challenge of Monaco's tight corners and iconic tunnel.</p>
+        </div>
+        <div class="highlight-item">
+          <img src="images/race_2.jpg" alt="Race 2">
+          <h3>Silverstone</h3>
+          <p>The home of British motorsport and one of the fastest tracks on the calendar.</p>
+        </div>
+        <div class="highlight-item">
+          <img src="images/race_3.jpg" alt="Race 3">
+          <h3>Suzuka Circuit</h3>
+          <p>Japan's famous figure-eight circuit, a true test of driver skill.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action">
+      <h2>Stay Updated</h2>
+      <p>Sign up for the latest news, updates, and race results directly to your inbox.</p>
+      <form id="signup-form">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 F1 Fan Hub - All rights reserved</p>
+    <p>Follow us: 
+      <a href="#" aria-label="Facebook">Facebook</a> | 
+      <a href="#" aria-label="Twitter">Twitter</a> | 
+      <a href="#" aria-label="Instagram">Instagram</a>
+    </p>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>

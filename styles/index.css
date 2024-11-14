@@ -1,0 +1,87 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.hero {
+  background: url('../images/hero_bg.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.hero .btn {
+  background: red;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* About Section */
+.about {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.about img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Highlights Section */
+.highlights {
+  padding: 2rem 1rem;
+}
+
+.highlights .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.highlight-item {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.highlight-item img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}

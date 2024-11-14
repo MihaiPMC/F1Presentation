@@ -1,0 +1,78 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Statistics Table */
+.statistics {
+  padding: 2rem 1rem;
+}
+
+#standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+#standings-table th,
+#standings-table td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+#standings-table th {
+  background-color: #333;
+  color: white;
+}
+
+#standings-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#standings-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Chart Section */
+.chart-section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+canvas {
+  border: 1px solid #ddd;
+  margin-top: 1rem;
+  background: #fff;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}

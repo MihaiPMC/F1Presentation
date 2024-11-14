@@ -1,0 +1,32 @@
+{
+  "circuits": [
+    {
+      "name": "Monaco Grand Prix",
+      "country": "Monaco",
+      "image": "images/monaco.jpg",
+      "latitude": 43.7347,
+      "longitude": 7.4206
+    },
+    {
+      "name": "Silverstone Circuit",
+      "country": "United Kingdom",
+      "image": "images/silverstone.jpg",
+      "latitude": 52.0733,
+      "longitude": -1.0143
+    },
+    {
+      "name": "Suzuka Circuit",
+      "country": "Japan",
+      "image": "images/suzuka.jpg",
+      "latitude": 34.8431,
+      "longitude": 136.5416
+    },
+    {
+      "name": "Circuit of the Americas",
+      "country": "United States",
+      "image": "images/cota.jpg",
+      "latitude": 30.1346,
+      "longitude": -97.6361
+    }
+  ]
+}

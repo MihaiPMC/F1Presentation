@@ -1,0 +1,29 @@
+{
+  "teams": [
+    {
+      "name": "Red Bull Racing",
+      "logo": "images/redbull_logo.png",
+      "drivers": ["Max Verstappen", "Sergio Pérez"]
+    },
+    {
+      "name": "Mercedes",
+      "logo": "images/mercedes_logo.png",
+      "drivers": ["Lewis Hamilton", "George Russell"]
+    },
+    {
+      "name": "Ferrari",
+      "logo": "images/ferrari_logo.png",
+      "drivers": ["Charles Leclerc", "Carlos Sainz"]
+    },
+    {
+      "name": "McLaren",
+      "logo": "images/mclaren_logo.png",
+      "drivers": ["Lando Norris", "Oscar Piastri"]
+    },
+    {
+      "name": "Aston Martin",
+      "logo": "images/astonmartin_logo.png",
+      "drivers": ["Fernando Alonso", "Lance Stroll"]
+    }
+  ]
+}
