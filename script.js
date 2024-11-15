@@ -182,49 +182,74 @@ document.addEventListener("DOMContentLoaded", () => {
 function drawBarChart(ctx, teamPoints) {
   const teams = Object.keys(teamPoints);
   const points = Object.values(teamPoints);
-
-  // Chart dimensions
-  const chartWidth = ctx.canvas.width;
-  const chartHeight = ctx.canvas.height;
-  const barWidth = chartWidth / teams.length - 20;
   const maxPoints = Math.max(...points);
-  const padding = 50;
 
-  // Draw chart background
-  ctx.fillStyle = "#f4f4f4";
-  ctx.fillRect(0, 0, chartWidth, chartHeight);
+  // Chart dimensions and padding
+  const padding = 40;
+  const chartWidth = ctx.canvas.width - (padding * 2);
+  const chartHeight = ctx.canvas.height - (padding * 2);
+  const barWidth = (chartWidth / teams.length) * 0.8;
+  const spacing = (chartWidth / teams.length) * 0.2;
 
-  // Draw bars
-  teams.forEach((team, index) => {
-    const barHeight = (points[index] / maxPoints) * (chartHeight - padding);
-    const x = index * (barWidth + 20) + 20;
-    const y = chartHeight - barHeight - padding;
+  // Clear canvas
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
-    // Bar
-    ctx.fillStyle = "rgba(75, 192, 192, 0.7)";
-    ctx.fillRect(x, y, barWidth, barHeight);
-
-    // Team name
-    ctx.fillStyle = "#333";
-    ctx.font = "12px Arial";
-    ctx.textAlign = "center";
-    ctx.fillText(team, x + barWidth / 2, chartHeight - 20);
-
-    // Points
-    ctx.fillStyle = "#000";
-    ctx.font = "14px Arial";
-    ctx.fillText(points[index], x + barWidth / 2, y - 10);
-  });
+  // Team colors
+  const teamColors = {
+    'Mercedes': '#00D2BE',
+    'Red Bull': '#0600EF',
+    'Ferrari': '#DC0000',
+    'McLaren': '#FF8700',
+    'Alpine': '#0090FF',
+    'AlphaTauri': '#2B4562',
+    'Aston Martin': '#006F62',
+    'Williams': '#005AFF',
+    'Alfa Romeo': '#900000',
+    'Haas': '#FFFFFF'
+  };
 
   // Draw axes
-  ctx.strokeStyle = "#333";
-  ctx.lineWidth = 2;
   ctx.beginPath();
-  ctx.moveTo(padding, chartHeight - padding);
-  ctx.lineTo(chartWidth - 10, chartHeight - padding); // X-axis
-  ctx.moveTo(padding, chartHeight - padding);
-  ctx.lineTo(padding, 10); // Y-axis
+  ctx.moveTo(padding, padding);
+  ctx.lineTo(padding, chartHeight + padding);
+  ctx.lineTo(chartWidth + padding, chartHeight + padding);
+  ctx.strokeStyle = '#333';
   ctx.stroke();
+
+  // Draw bars and labels
+  teams.forEach((team, i) => {
+    const x = padding + (i * (barWidth + spacing));
+    const barHeight = (points[i] / maxPoints) * chartHeight;
+    const y = chartHeight + padding - barHeight;
+
+    // Draw bar
+    ctx.fillStyle = teamColors[team] || '#999';
+    ctx.fillRect(x, y, barWidth, barHeight);
+
+    // Draw team name
+    ctx.save();
+    ctx.translate(x + barWidth/2, chartHeight + padding + 10);
+    ctx.rotate(-Math.PI / 4);
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#333';
+    ctx.font = '12px Arial';
+    ctx.fillText(team, 0, 0);
+    ctx.restore();
+
+    // Draw points
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#333';
+    ctx.fillText(points[i], x + barWidth/2, y - 5);
+  });
+
+  // Draw scale
+  for(let i = 0; i <= 5; i++) {
+    const y = chartHeight + padding - (i * chartHeight/5);
+    const points = Math.round((i * maxPoints/5));
+    ctx.fillStyle = '#666';
+    ctx.textAlign = 'right';
+    ctx.fillText(points, padding - 5, y + 4);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

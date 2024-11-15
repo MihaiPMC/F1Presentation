@@ -24,6 +24,31 @@
       "name": "Aston Martin",
       "logo": "images/astonmartin_logo.png",
       "drivers": ["Fernando Alonso", "Lance Stroll"]
+    },
+    {
+      "name": "Alpine",
+      "logo": "images/alpine_logo.png",
+      "drivers": ["Esteban Ocon", "Pierre Gasly"]
+    },
+    {
+      "name": "Williams",
+      "logo": "images/williams_logo.png",
+      "drivers": ["Alexander Albon", "Logan Sargeant"]
+    },
+    {
+      "name": "RB",
+      "logo": "images/rb_logo.png",
+      "drivers": ["Daniel Ricciardo", "Yuki Tsunoda"]
+    },
+    {
+      "name": "Stake F1 Team",
+      "logo": "images/stake_logo.png",
+      "drivers": ["Valtteri Bottas", "Zhou Guanyu"]
+    },
+    {
+      "name": "Haas F1 Team",
+      "logo": "images/haas_logo.png",
+      "drivers": ["Nico Hulkenberg", "Kevin Magnussen"]
     }
   ]
 }

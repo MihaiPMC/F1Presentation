@@ -1,29 +1,79 @@
 {
   "questions": [
     {
-      "text": "Who has the most Formula 1 World Championships?",
-      "choices": ["Lewis Hamilton", "Michael Schumacher", "Ayrton Senna", "Sebastian Vettel"],
-      "correct": 1
-    },
-    {
-      "text": "Which team has the most Constructors' Championships?",
-      "choices": ["Ferrari", "McLaren", "Mercedes", "Red Bull Racing"],
+      "text": "Who currently holds the record for most F1 World Championships?",
+      "choices": ["Lewis Hamilton", "Michael Schumacher", "Sebastian Vettel", "Max Verstappen"],
       "correct": 0
     },
     {
-      "text": "Which circuit is known as 'The Temple of Speed'?",
-      "choices": ["Silverstone", "Monza", "Suzuka", "Spa-Francorchamps"],
+      "text": "Which team has won the most consecutive Constructors' Championships (2014-2021)?",
+      "choices": ["Ferrari", "Red Bull Racing", "Mercedes", "McLaren"],
+      "correct": 2
+    },
+    {
+      "text": "Who won the 2024 Saudi Arabian Grand Prix?",
+      "choices": ["Max Verstappen", "Charles Leclerc", "Sergio Perez", "Lewis Hamilton"],
+      "correct": 0
+    },
+    {
+      "text": "Which new team name replaced AlphaTauri in 2024?",
+      "choices": ["Racing Bulls", "Visa RB", "RB F1 Team", "RB"],
+      "correct": 2
+    },
+    {
+      "text": "Which driver is moving to Ferrari for the 2025 season?",
+      "choices": ["Fernando Alonso", "Lewis Hamilton", "Lando Norris", "Oscar Piastri"],
       "correct": 1
     },
     {
-      "text": "In what year did Formula 1 first officially start?",
-      "choices": ["1946", "1950", "1955", "1960"],
+      "text": "What is the longest current track on the F1 calendar?",
+      "choices": ["Monza", "Spa-Francorchamps", "Silverstone", "Baku"],
       "correct": 1
     },
     {
-      "text": "Which driver holds the record for the most wins in a single season?",
-      "choices": ["Sebastian Vettel", "Lewis Hamilton", "Michael Schumacher", "Max Verstappen"],
-      "correct": 3
+      "text": "Who holds the record for most race wins in F1 history?",
+      "choices": ["Michael Schumacher", "Lewis Hamilton", "Sebastian Vettel", "Max Verstappen"],
+      "correct": 1
+    },
+    {
+      "text": "Which circuit hosted the first-ever F1 World Championship race in 1950?",
+      "choices": ["Monaco", "Monza", "Silverstone", "Spa-Francorchamps"],
+      "correct": 2
+    },
+    {
+      "text": "What is the maximum number of points available in a single race weekend with Sprint?",
+      "choices": ["25", "26", "34", "33"],
+      "correct": 2
+    },
+    {
+      "text": "Which team rebranded to 'Stake F1 Team' for 2024?",
+      "choices": ["Alfa Romeo", "Williams", "Haas", "Alpine"],
+      "correct": 0
+    },
+    {
+      "text": "How many Sprint races are scheduled for the 2024 season?",
+      "choices": ["4", "6", "8", "3"],
+      "correct": 1
+    },
+    {
+      "text": "What is the minimum age requirement for an F1 super license?",
+      "choices": ["17", "18", "16", "21"],
+      "correct": 1
+    },
+    {
+      "text": "Which track returned to F1 in 2024 after a 5-year absence?",
+      "choices": ["Shanghai", "Sepang", "Hockenheim", "Istanbul"],
+      "correct": 0
+    },
+    {
+      "text": "How many DRS zones does the Jeddah Corniche Circuit have?",
+      "choices": ["2", "3", "4", "5"],
+      "correct": 2
+    },
+    {
+      "text": "Which driver won the 2023 F1 World Championship?",
+      "choices": ["Lewis Hamilton", "Max Verstappen", "Sergio Perez", "Charles Leclerc"],
+      "correct": 1
     }
   ]
 }

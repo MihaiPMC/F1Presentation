@@ -7,6 +7,18 @@
     { "name": "Charles Leclerc", "team": "Ferrari", "points": 225 },
     { "name": "Carlos Sainz", "team": "Ferrari", "points": 205 },
     { "name": "Fernando Alonso", "team": "Aston Martin", "points": 180 },
-    { "name": "Lando Norris", "team": "McLaren", "points": 160 }
+    { "name": "Lando Norris", "team": "McLaren", "points": 160 },
+    { "name": "Oscar Piastri", "team": "McLaren", "points": 140 },
+    { "name": "Lance Stroll", "team": "Aston Martin", "points": 120 },
+    { "name": "Esteban Ocon", "team": "Alpine", "points": 100 },
+    { "name": "Pierre Gasly", "team": "Alpine", "points": 90 },
+    { "name": "Valtteri Bottas", "team": "Stake F1 Team", "points": 80 },
+    { "name": "Zhou Guanyu", "team": "Stake F1 Team", "points": 70 },
+    { "name": "Alexander Albon", "team": "Williams", "points": 60 },
+    { "name": "Logan Sargeant", "team": "Williams", "points": 50 },
+    { "name": "Nico Hulkenberg", "team": "Haas F1 Team", "points": 40 },
+    { "name": "Kevin Magnussen", "team": "Haas F1 Team", "points": 30 },
+    { "name": "Daniel Ricciardo", "team": "RB", "points": 20 },
+    { "name": "Yuki Tsunoda", "team": "RB", "points": 10 }
   ]
 }
