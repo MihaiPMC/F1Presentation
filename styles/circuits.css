@@ -1,5 +1,6 @@
 /* General styles */
-html, body{
+html,
+body {
   height: 100%;
 }
 
@@ -14,13 +15,12 @@ body {
 header {
   display: flex;
   align-items: center;
-  background: #E00400;
+  background: #e00400;
   color: white;
   padding: 1rem;
 }
 
-main
-{
+main {
   flex: 1;
 }
 
@@ -32,11 +32,10 @@ footer {
   padding: 1rem;
 }
 
-header .logo{
+header .logo {
   height: 30px;
   margin-right: 1rem;
 }
-
 
 .menu {
   display: flex;
@@ -93,30 +92,93 @@ header .logo{
   text-align: center;
 }
 
-.map {
+.circuit-info {
   width: 100%;
-  height: 500px;
-  margin-top: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.circuit-info h3 {
+  color: #e00400;
+  margin-bottom: 1rem;
+}
 
+.circuit-info p {
+  margin: 0.5rem 0;
+  color: #333;
+}
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.btn {
+  background: #e00400;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #b30300;
+}
 
 .dropdown {
   position: relative;
+}
+
+.dropdown::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+}
+
+.dropdown > a::after {
+  content: "▾";
+  font-size: 0.8em;
+  margin-left: 6px;
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  min-width: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
   z-index: 1;
+  border-radius: 0 0 4px 4px;
+  border-top: 3px solid #e00400;
+  overflow: hidden;
+  animation: dropdownFade 0.2s ease;
+  padding: 5px 0;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 .dropdown:hover .dropdown-menu {
@@ -124,15 +186,30 @@ header .logo{
 }
 
 .dropdown-menu li {
-  padding: 10px;
+  padding: 8px 12px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
 }
 
 .dropdown-menu li a {
   color: #333;
-  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: all 0.2s ease;
   display: block;
+  padding-left: 0;
 }
 
 .dropdown-menu li:hover {
-  background-color: #f5f5f5;
+  background-color: #fff5f5;
+}
+
+.dropdown-menu li:hover a {
+  color: #e00400;
+  transform: translateX(3px);
 }
