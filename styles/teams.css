@@ -59,12 +59,16 @@ header .logo {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
 }
 
 .team-card {
+  flex: 1 1 300px;
+  max-width: 300px;
+  box-sizing: border-box;
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -178,4 +182,18 @@ header .logo {
 .dropdown-menu li:hover a {
   color: #e00400;
   transform: translateX(3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

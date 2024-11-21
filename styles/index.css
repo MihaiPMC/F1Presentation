@@ -75,6 +75,11 @@ header .logo {
 .about {
   padding: 2rem 1rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about img {
@@ -86,19 +91,30 @@ header .logo {
 /* Highlights Section */
 .highlights {
   padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .highlights .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .highlight-item {
+  flex: 1 1 300px;
+  max-width: 400px;
   background: #f9f9f9;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.highlight-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .highlight-item img {
@@ -113,7 +129,8 @@ header .logo {
   padding: 2rem 1rem;
   background-color: #f1f1f1;
   border-radius: 10px;
-  margin: 2rem 0;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
 .f1-details h2 {
@@ -130,7 +147,7 @@ header .logo {
 }
 
 .dropdown::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 20px; /* Create invisible bridge */
   width: 100%;
@@ -139,7 +156,7 @@ header .logo {
 }
 
 .dropdown > a::after {
-  content: '▾';
+  content: "▾";
   font-size: 0.8em;
   margin-left: 6px;
 }
@@ -203,4 +220,52 @@ header .logo {
 .dropdown-menu li:hover a {
   color: #e00400;
   transform: translateX(3px); /* Reduce the hover movement slightly */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main {
+    padding: 0 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .highlights .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-item {
+    flex: 1 1 100%;
+  }
+
+  .about, .f1-details {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .highlight-item img {
+    height: 150px;
+  }
 }

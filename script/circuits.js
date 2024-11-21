@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const circuitsGrid = document.getElementById("circuits-grid");
-  const circuitInfo = document.getElementById("circuit-info");
+  const circuitDetails = document.getElementById("circuit-details");
 
   // Fetch circuit data from JSON and populate the grid
   fetch("data/circuits.json")
@@ -25,19 +25,39 @@ document.addEventListener("DOMContentLoaded", () => {
         viewDetailsBtn.textContent = "View Details";
         viewDetailsBtn.className = "btn";
         viewDetailsBtn.addEventListener("click", () => {
-          circuitInfo.innerHTML = `
+          circuitDetails.innerHTML = `
             <h3>${circuit.name}</h3>
-            <p>Country: ${circuit.country}</p>
-            <p>Length: ${circuit.length}</p>
-            <p>Number of Laps: ${circuit.laps}</p>
-            <p>First Grand Prix: ${circuit.firstGP}</p>
+            <p>
+              <span>🌍 Country:</span>
+              <span>${circuit.country}</span>
+            </p>
+            <p>
+              <span>📏 Circuit Length:</span>
+              <span>${circuit.length}</span>
+            </p>
+            <p>
+              <span>🏁 Race Distance:</span>
+              <span>${circuit.laps} laps</span>
+            </p>
+            <p>
+              <span>📅 First Grand Prix:</span>
+              <span>${circuit.firstGP}</span>
+            </p>
           `;
+          circuitDetails.classList.add("active");
+          circuitDetails.scrollIntoView({ behavior: "smooth", block: "center" });
         });
 
         circuitCard.appendChild(circuitImage);
-        circuitCard.appendChild(circuitName);
-        circuitCard.appendChild(circuitCountry);
-        circuitCard.appendChild(viewDetailsBtn);
+
+        const infoWrapper = document.createElement("div");
+        infoWrapper.className = "circuit-info-wrapper";
+
+        infoWrapper.appendChild(circuitName);
+        infoWrapper.appendChild(circuitCountry);
+        infoWrapper.appendChild(viewDetailsBtn);
+
+        circuitCard.appendChild(infoWrapper);
 
         circuitsGrid.appendChild(circuitCard);
       });
