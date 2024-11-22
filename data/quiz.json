@@ -1,78 +1,78 @@
 {
   "questions": [
     {
-      "text": "Who currently holds the record for most F1 World Championships?",
-      "choices": ["Lewis Hamilton", "Michael Schumacher", "Sebastian Vettel", "Max Verstappen"],
+      "text": "Which F1 driver has won the most races in a single season?",
+      "choices": ["Sebastian Vettel", "Michael Schumacher", "Lewis Hamilton", "Max Verstappen"],
+      "correct": 3
+    },
+    {
+      "text": "What is the fastest lap ever recorded in F1 history?",
+      "choices": ["1:18.887", "1:19.119", "1:17.765", "1:16.982"],
+      "correct": 1
+    },
+    {
+      "text": "Which team has won the most Constructors' Championships in F1 history?",
+      "choices": ["McLaren", "Williams", "Ferrari", "Mercedes"],
+      "correct": 2
+    },
+    {
+      "text": "What is the youngest age at which a driver has won an F1 race?",
+      "choices": ["18 years", "19 years", "20 years", "21 years"],
+      "correct": 1
+    },
+    {
+      "text": "Which track is known as 'The Temple of Speed'?",
+      "choices": ["Silverstone", "Monza", "Spa-Francorchamps", "Red Bull Ring"],
+      "correct": 1
+    },
+    {
+      "text": "What color were Ferrari's cars originally?",
+      "choices": ["Red", "Yellow", "Blue", "Green"],
       "correct": 0
     },
     {
-      "text": "Which team has won the most consecutive Constructors' Championships (2014-2021)?",
-      "choices": ["Ferrari", "Red Bull Racing", "Mercedes", "McLaren"],
+      "text": "Which driver has the nickname 'The Professor'?",
+      "choices": ["Niki Lauda", "Alain Prost", "Ayrton Senna", "Jackie Stewart"],
+      "correct": 1
+    },
+    {
+      "text": "What was the first season of the F1 World Championship?",
+      "choices": ["1946", "1948", "1950", "1952"],
       "correct": 2
     },
     {
-      "text": "Who won the 2024 Saudi Arabian Grand Prix?",
-      "choices": ["Max Verstappen", "Charles Leclerc", "Sergio Perez", "Lewis Hamilton"],
+      "text": "How many championship points are awarded for the fastest lap?",
+      "choices": ["0", "1", "2", "3"],
+      "correct": 1
+    },
+    {
+      "text": "Which circuit features the famous 'Eau Rouge' corner?",
+      "choices": ["Spa-Francorchamps", "Monaco", "Suzuka", "Silverstone"],
       "correct": 0
     },
     {
-      "text": "Which new team name replaced AlphaTauri in 2024?",
-      "choices": ["Racing Bulls", "Visa RB", "RB F1 Team", "RB"],
-      "correct": 2
-    },
-    {
-      "text": "Which driver is moving to Ferrari for the 2025 season?",
-      "choices": ["Fernando Alonso", "Lewis Hamilton", "Lando Norris", "Oscar Piastri"],
+      "text": "What is the minimum weight of an F1 car (including driver) in 2024?",
+      "choices": ["798kg", "800kg", "805kg", "795kg"],
       "correct": 1
     },
     {
-      "text": "What is the longest current track on the F1 calendar?",
-      "choices": ["Monza", "Spa-Francorchamps", "Silverstone", "Baku"],
+      "text": "Which team won their first F1 race in Hungary 2003?",
+      "choices": ["Toyota", "Renault", "Fernando Alonso", "BMW"],
       "correct": 1
     },
     {
-      "text": "Who holds the record for most race wins in F1 history?",
-      "choices": ["Michael Schumacher", "Lewis Hamilton", "Sebastian Vettel", "Max Verstappen"],
-      "correct": 1
-    },
-    {
-      "text": "Which circuit hosted the first-ever F1 World Championship race in 1950?",
-      "choices": ["Monaco", "Monza", "Silverstone", "Spa-Francorchamps"],
-      "correct": 2
-    },
-    {
-      "text": "What is the maximum number of points available in a single race weekend with Sprint?",
-      "choices": ["25", "26", "34", "33"],
-      "correct": 2
-    },
-    {
-      "text": "Which team rebranded to 'Stake F1 Team' for 2024?",
-      "choices": ["Alfa Romeo", "Williams", "Haas", "Alpine"],
+      "text": "What is the maximum fuel flow rate allowed in F1?",
+      "choices": ["100 kg/hr", "110 kg/hr", "95 kg/hr", "105 kg/hr"],
       "correct": 0
     },
     {
-      "text": "How many Sprint races are scheduled for the 2024 season?",
-      "choices": ["4", "6", "8", "3"],
-      "correct": 1
-    },
-    {
-      "text": "What is the minimum age requirement for an F1 super license?",
-      "choices": ["17", "18", "16", "21"],
-      "correct": 1
-    },
-    {
-      "text": "Which track returned to F1 in 2024 after a 5-year absence?",
-      "choices": ["Shanghai", "Sepang", "Hockenheim", "Istanbul"],
-      "correct": 0
-    },
-    {
-      "text": "How many DRS zones does the Jeddah Corniche Circuit have?",
-      "choices": ["2", "3", "4", "5"],
+      "text": "Which driver has the most pole positions in F1 history?",
+      "choices": ["Michael Schumacher", "Ayrton Senna", "Lewis Hamilton", "Max Verstappen"],
       "correct": 2
     },
     {
-      "text": "Which driver won the 2023 F1 World Championship?",
-      "choices": ["Lewis Hamilton", "Max Verstappen", "Sergio Perez", "Charles Leclerc"],
+      "text": "What is the current engine formula in F1?",
+      "choices": ["V8", "V6 Turbo Hybrid", "V10", "V12"],
       "correct": 1
     }
   ]

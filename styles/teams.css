@@ -1,4 +1,3 @@
-/* General styles */
 html,
 body {
   height: 100%;
@@ -24,7 +23,6 @@ main {
   flex: 1;
 }
 
-/* Footer */
 footer {
   background: #333;
   color: white;
@@ -53,7 +51,6 @@ header .logo {
   color: white;
 }
 
-/* General Info Section */
 .general-info {
   max-width: 800px;
   margin: 2rem auto;
@@ -80,7 +77,6 @@ header .logo {
   margin: 1rem 0;
 }
 
-/* Teams Section */
 .teams {
   padding: 2rem 1rem;
 }
@@ -130,18 +126,8 @@ header .logo {
   margin: 0.5rem 0;
 }
 
-/* Replace the old dropdown styles with these new ones */
 .dropdown {
   position: relative;
-}
-
-.dropdown::after {
-  content: "";
-  position: absolute;
-  height: 20px;
-  width: 100%;
-  bottom: -20px;
-  left: 0;
 }
 
 .dropdown > a::after {
@@ -211,7 +197,6 @@ header .logo {
   transform: translateX(3px);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   header {
     flex-direction: column;

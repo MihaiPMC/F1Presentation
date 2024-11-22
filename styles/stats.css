@@ -1,4 +1,3 @@
-/* General styles */
 html,
 body {
   height: 100%;
@@ -23,8 +22,6 @@ header {
 main {
   flex: 1;
 }
-
-/* Footer */
 
 footer {
   background: #333;
@@ -54,14 +51,12 @@ header .logo {
   color: white;
 }
 
-/* Statistics Table */
 .statistics {
   padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* General Info Section */
 .general-info {
   max-width: 800px;
   margin: 2rem auto;
@@ -130,9 +125,8 @@ header .logo {
   color: #e00400;
 }
 
-/* Chart Section */
 .chart-section {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 4rem 1rem;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -144,9 +138,11 @@ canvas {
   margin-top: 1rem;
   background: #fff;
   padding: 1rem;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
 }
 
-/* Replace the old dropdown styles with these new ones */
 .dropdown {
   position: relative;
 }
@@ -227,7 +223,6 @@ canvas {
   transform: translateX(3px);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   header {
     flex-direction: column;

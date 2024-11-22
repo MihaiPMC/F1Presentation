@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const circuitsGrid = document.getElementById("circuits-grid");
   const circuitDetails = document.getElementById("circuit-details");
 
-  // Fetch circuit data from JSON and populate the grid
   fetch("data/circuits.json")
     .then((response) => response.json())
     .then((data) => {

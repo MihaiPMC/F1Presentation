@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentQuestionIndex = 0;
   let score = 0;
 
-  // Fetch quiz questions from JSON
   fetch("data/quiz.json")
     .then((response) => response.json())
     .then((data) => {
@@ -16,17 +15,19 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((error) => console.error("Error fetching quiz data:", error));
 
-  // Load a question
   function loadQuestion() {
-    quizContainer.innerHTML = ""; // Clear previous content
+    quizContainer.innerHTML = ""; 
     const question = questions[currentQuestionIndex];
 
-    // Display question text
+    const questionCounter = document.createElement("div");
+    questionCounter.className = "question-counter";
+    questionCounter.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+    quizContainer.appendChild(questionCounter);
+
     const questionText = document.createElement("h3");
     questionText.textContent = question.text;
     quizContainer.appendChild(questionText);
 
-    // Display answer choices
     question.choices.forEach((choice, index) => {
       const choiceButton = document.createElement("button");
       choiceButton.className = "choice-btn";
@@ -36,29 +37,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Handle answer selection
   function handleAnswer(selectedIndex, correctIndex) {
     const buttons = document.querySelectorAll(".choice-btn");
     buttons.forEach((button, index) => {
       if (index === correctIndex) {
-        button.style.backgroundColor = "green";
+        button.classList.add("correct");
       } else if (index === selectedIndex) {
-        button.style.backgroundColor = "red";
+        button.classList.add("incorrect");
       }
       button.disabled = true;
     });
 
-    // Update score if the answer is correct
     if (selectedIndex === correctIndex) {
       score++;
       scoreDisplay.textContent = score;
     }
 
-    // Enable the "Next Question" button
     nextButton.disabled = false;
   }
 
-  // Move to the next question
   nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
@@ -69,11 +66,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Show final score
   function showFinalScore() {
+    const percentage = (score / questions.length) * 100;
+    const message = percentage >= 70 ? "Great job!" : "Keep practicing!";
+    const emoji = percentage >= 70 ? "🏆" : "💪";
+    
     quizContainer.innerHTML = `
-      <h3>Quiz Complete!</h3>
-      <p>Your final score is ${score} out of ${questions.length}.</p>
+        <div class="final-score-container">
+            <h2 class="final-score-title">Quiz Complete! ${emoji}</h2>
+            <div class="score-circle">
+                <span class="percentage">${Math.round(percentage)}%</span>
+                <span class="score-details">${score}/${questions.length}</span>
+            </div>
+            <p class="final-message">${message}</p>
+            <button onclick="location.reload()" class="retry-btn">Try Again</button>
+        </div>
     `;
     nextButton.style.display = "none";
   }

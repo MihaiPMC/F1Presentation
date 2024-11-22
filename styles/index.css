@@ -1,4 +1,3 @@
-/* General styles */
 html,
 body {
   height: 100%;
@@ -22,10 +21,9 @@ header {
 
 main {
   flex: 1;
-  padding: 0 2rem; /* Add padding to the left and right */
+  padding: 0 2rem;
 }
 
-/* Footer */
 footer {
   background: #333;
   color: white;
@@ -71,7 +69,6 @@ header .logo {
   text-decoration: none;
 }
 
-/* About Section */
 .about {
   padding: 2rem 1rem;
   text-align: center;
@@ -88,7 +85,6 @@ header .logo {
   border-radius: 10px;
 }
 
-/* Highlights Section */
 .highlights {
   padding: 2rem 1rem;
   max-width: 1400px;
@@ -118,28 +114,72 @@ header .logo {
 }
 
 .highlight-item img {
-  width: 100%; /* Ensure the image takes the full width of its container */
-  height: 200px; /* Set a fixed height */
-  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* F1 Details Section */
 .f1-details {
-  padding: 2rem 1rem;
-  background-color: #f1f1f1;
-  border-radius: 10px;
+  max-width: 800px;
   margin: 2rem auto;
-  max-width: 1200px;
+  padding: 2.5rem;
+  background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
 
 .f1-details h2 {
-  margin-bottom: 1rem;
+  color: #e00400;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e00400;
+  padding-bottom: 0.5rem;
 }
 
 .f1-details p {
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.nav-button {
+  background: #e00400;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s;
+  text-align: center;
+  min-width: 160px;
+}
+
+.nav-button:hover {
+  background: #b30300;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .nav-button {
+    min-width: 140px;
+    padding: 0.8rem 1.5rem;
+  }
 }
 
 .dropdown {
@@ -149,7 +189,7 @@ header .logo {
 .dropdown::after {
   content: "";
   position: absolute;
-  height: 20px; /* Create invisible bridge */
+  height: 20px;
   width: 100%;
   bottom: -20px;
   left: 0;
@@ -169,13 +209,13 @@ header .logo {
   transform: translateX(-50%);
   background-color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  min-width: 180px; /* Slightly reduced width */
+  min-width: 180px;
   z-index: 1;
   border-radius: 0 0 4px 4px;
   border-top: 3px solid #e00400;
   overflow: hidden;
   animation: dropdownFade 0.2s ease;
-  padding: 5px 0; /* Add some vertical padding */
+  padding: 5px 0;
 }
 
 @keyframes dropdownFade {
@@ -194,8 +234,8 @@ header .logo {
 }
 
 .dropdown-menu li {
-  padding: 8px 12px; /* Reduced padding */
-  margin: 0; /* Reset any margin */
+  padding: 8px 12px;
+  margin: 0;
   border-bottom: 1px solid #eee;
   transition: all 0.2s ease;
 }
@@ -210,7 +250,7 @@ header .logo {
   font-weight: 500;
   transition: all 0.2s ease;
   display: block;
-  padding-left: 0; /* Remove any left padding from links */
+  padding-left: 0;
 }
 
 .dropdown-menu li:hover {
@@ -219,10 +259,9 @@ header .logo {
 
 .dropdown-menu li:hover a {
   color: #e00400;
-  transform: translateX(3px); /* Reduce the hover movement slightly */
+  transform: translateX(3px);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -251,7 +290,8 @@ header .logo {
     flex: 1 1 100%;
   }
 
-  .about, .f1-details {
+  .about,
+  .f1-details {
     padding: 1.5rem 1rem;
   }
 }
