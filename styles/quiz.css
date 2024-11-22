@@ -85,7 +85,6 @@ header .logo {
   font-weight: bold;
 }
 
-
 .general-info {
   max-width: 800px;
   margin: 2rem auto;
@@ -174,7 +173,6 @@ header .logo {
   cursor: not-allowed;
   transform: none;
 }
-
 
 .dropdown {
   position: relative;
@@ -276,7 +274,7 @@ header .logo {
 .final-score-container {
   padding: 2rem;
   text-align: center;
-  animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out, congratsAnimation 1.5s infinite;
 }
 
 .final-score-title {
@@ -356,6 +354,18 @@ header .logo {
   to {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes congratsAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
