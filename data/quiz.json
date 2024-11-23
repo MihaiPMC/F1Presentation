@@ -57,7 +57,7 @@
     },
     {
       "text": "Which team won their first F1 race in Hungary 2003?",
-      "choices": ["Toyota", "Renault", "Fernando Alonso", "BMW"],
+      "choices": ["Toyota", "Renault", "Jaguar", "BMW"],
       "correct": 1
     },
     {
