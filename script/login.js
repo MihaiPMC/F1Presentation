@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
         loginForm.style.display = 'block';
     });
 
-    async function hashPassword(password) {
+    async function hashData(data) {
         const encoder = new TextEncoder();
-        const data = encoder.encode(password);
-        const hash = await crypto.subtle.digest('SHA-256', data);
+        const encoded = encoder.encode(data);
+        const hash = await crypto.subtle.digest('SHA-256', encoded);
         return Array.from(new Uint8Array(hash))
             .map(b => b.toString(16).padStart(2, '0'))
             .join('');
@@ -59,15 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const hashedPassword = await hashPassword(password);
+        const hashedUsername = await hashData(username.toLowerCase());
+        const hashedEmail = await hashData(email.toLowerCase());
+        const hashedPassword = await hashData(password);
 
         const users = JSON.parse(localStorage.getItem('users') || '[]');
-        if (users.some(user => user.email === email || user.username === username)) {
+        if (users.some(user => user.hashedEmail === hashedEmail || user.hashedUsername === hashedUsername)) {
             alert('Username or email already registered');
             return;
         }
 
-        users.push({ username, email, password: hashedPassword });
+        users.push({ 
+            username, 
+            hashedUsername,
+            hashedEmail,
+            password: hashedPassword 
+        });
         localStorage.setItem('users', JSON.stringify(users));
         alert('Registration successful! Please login.');
         
@@ -84,11 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
         hideError('loginEmailError');
         hideError('loginPasswordError');
 
-        const hashedPassword = await hashPassword(password);
+        const hashedPassword = await hashData(password);
+        const hashedLoginId = await hashData(loginId.toLowerCase());
 
         const users = JSON.parse(localStorage.getItem('users') || '[]');
         const user = users.find(u => 
-            (u.email === loginId || u.username === loginId) && u.password === hashedPassword
+            (u.hashedEmail === hashedLoginId || u.hashedUsername === hashedLoginId) && 
+            u.password === hashedPassword
         );
 
         if (user) {
