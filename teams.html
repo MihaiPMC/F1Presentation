@@ -41,8 +41,10 @@
       </div>
     </section>
   </main>
-  <footer>
-    <p>© 2024 F1 Fan Hub - All rights reserved</p>
-  </footer>
+    <footer>
+  <p>© <span id="current-year"></span> F1 Fan Hub - All rights reserved</p>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
